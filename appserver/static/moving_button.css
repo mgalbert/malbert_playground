@@ -1,0 +1,17 @@
+#moveButton {
+    background-color: #009933;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#moveButton:hover {
+    background-color: #009933;
+}
+
+.dashboard-body {
+    position: relative;
+}
+

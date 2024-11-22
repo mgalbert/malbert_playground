@@ -1,0 +1,25 @@
+<dashboard version="1.1" script="moving_button.js,delayed_table_search.js" stylesheet="moving_button.css">
+  <label>Status Report</label>
+  <row>
+    <panel>
+      <html>
+          <button id="moveButton">Submit</button>
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <title>Status Report for the Week...</title>
+        <search id="tableSearch">
+          <query>| makeresults count=10
+| streamstats count
+| eval state="failure..."</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+      </table>
+    </panel>
+  </row>
+</dashboard>
